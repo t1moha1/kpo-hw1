@@ -3,6 +3,7 @@ using Microsoft.Extensions.DependencyInjection;
 using MyZoo.Models.Animals;
 using MyZoo.Models.Things;
 using MyZoo.Services;
+using MyZoo.Interfaces;
 
 namespace MyZoo
 {
@@ -11,7 +12,7 @@ namespace MyZoo
         private static void Main()
         {
             var services = new ServiceCollection();
-            services.AddSingleton<VetClinic>();
+            services.AddSingleton<IVetClinic, VetClinic>();
             services.AddSingleton<Zoo>();
 
             var provider = services.BuildServiceProvider();

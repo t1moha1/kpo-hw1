@@ -7,13 +7,13 @@ using MyZoo.Models.Things;
 
 namespace MyZoo.Services
 {
-    public class MyZoo
+    public class Zoo
     {
         private readonly List<Animal> _animals = new();
         private readonly List<Thing> _things = new();
-        private readonly VetClinic _clinic;
+        private readonly IVetClinic _clinic;
 
-        public Zoo(VetClinic clinic)
+        public Zoo(IVetClinic clinic)
         {
             _clinic = clinic;
         }
@@ -99,11 +99,11 @@ namespace MyZoo.Services
 
             foreach (var item in _animals)
             {
-                Console.WriteLine($"{item.GetType().Name} — {item.Number}")
+                Console.WriteLine($"{item.GetType().Name} — {item.Number}");
             }
             foreach (var item in _things)
             {
-                Console.WriteLine($"{item.GetType().Name} — {item.Number}")
+                Console.WriteLine($"{item.GetType().Name} — {item.Number}");
             }
 
         }

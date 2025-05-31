@@ -1,4 +1,4 @@
-namespace MMyZoo.Models.Animals
+namespace MyZoo.Models.Animals
 {
     public abstract class Herbo : Animal
     {
